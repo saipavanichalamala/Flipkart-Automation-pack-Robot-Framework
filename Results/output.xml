@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.11.0 on win32)" generated="20221124 18:44:35.546" rpa="false" schemaversion="3">
+<suite id="s1" name="Flipkart" source="C:\Robot\Flipkart">
+<suite id="s1-s1" name="Testcases" source="C:\Robot\Flipkart\Testcases">
+<suite id="s1-s1-s1" name="Search" source="C:\Robot\Flipkart\Testcases\Search.robot">
+<test id="s1-s1-s1-t1" name="Serching the product" line="15">
+<kw name="Begin Web Test" library="Common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221124 18:44:36.002" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20221124 18:44:36.001" endtime="20221124 18:44:37.897"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221124 18:44:37.897" endtime="20221124 18:44:38.023"/>
+</kw>
+<status status="PASS" starttime="20221124 18:44:36.000" endtime="20221124 18:44:38.023"/>
+</kw>
+<kw name="Open Application" library="HomepageDef">
+<kw name="Open the application" library="App">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${FlipkartURL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221124 18:44:38.026" level="INFO">Opening url 'https://flipkart.com'</msg>
+<status status="PASS" starttime="20221124 18:44:38.025" endtime="20221124 18:45:13.720"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css=div&gt;div&gt;div&gt;button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221124 18:45:13.720" endtime="20221124 18:45:13.769"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=div&gt;div&gt;div&gt;button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221124 18:45:13.771" level="INFO">Clicking element 'css=div&gt;div&gt;div&gt;button'.</msg>
+<status status="PASS" starttime="20221124 18:45:13.770" endtime="20221124 18:45:13.878"/>
+</kw>
+<status status="PASS" starttime="20221124 18:44:38.025" endtime="20221124 18:45:13.878"/>
+</kw>
+<status status="PASS" starttime="20221124 18:44:38.024" endtime="20221124 18:45:13.879"/>
+</kw>
+<kw name="Search the Product" library="HomepageDef">
+<kw name="Search For Product" library="Nav">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css=form.header-form-search&gt;div&gt;div&gt;input</arg>
+<arg>${searchProduct}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221124 18:45:13.883" level="INFO">Typing text 'Apple Mobile' into text field 'css=form.header-form-search&gt;div&gt;div&gt;input'.</msg>
+<status status="PASS" starttime="20221124 18:45:13.882" endtime="20221124 18:45:14.066"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=form.header-form-search&gt;div&gt;button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221124 18:45:14.067" level="INFO">Clicking element 'css=form.header-form-search&gt;div&gt;button'.</msg>
+<status status="PASS" starttime="20221124 18:45:14.066" endtime="20221124 18:45:14.144"/>
+</kw>
+<status status="PASS" starttime="20221124 18:45:13.881" endtime="20221124 18:45:14.144"/>
+</kw>
+<status status="PASS" starttime="20221124 18:45:13.880" endtime="20221124 18:45:14.145"/>
+</kw>
+<kw name="Verify Search results" library="Resultpagedef">
+<kw name="verify search results displayed" library="resultpage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>results for "${searchProduct}"</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20221124 18:45:14.148" endtime="20221124 18:45:15.833"/>
+</kw>
+<status status="PASS" starttime="20221124 18:45:14.147" endtime="20221124 18:45:15.833"/>
+</kw>
+<status status="PASS" starttime="20221124 18:45:14.146" endtime="20221124 18:45:15.833"/>
+</kw>
+<kw name="End Web Test" library="Common" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20221124 18:45:15.835" endtime="20221124 18:45:22.322"/>
+</kw>
+<status status="PASS" starttime="20221124 18:45:15.834" endtime="20221124 18:45:22.323"/>
+</kw>
+<status status="PASS" starttime="20221124 18:44:35.997" endtime="20221124 18:45:22.324"/>
+</test>
+<status status="PASS" starttime="20221124 18:44:35.596" endtime="20221124 18:45:22.328"/>
+</suite>
+<status status="PASS" starttime="20221124 18:44:35.590" endtime="20221124 18:45:22.333"/>
+</suite>
+<status status="PASS" starttime="20221124 18:44:35.554" endtime="20221124 18:45:22.337"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Flipkart">Flipkart</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Testcases">Flipkart.Testcases</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Search">Flipkart.Testcases.Search</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
