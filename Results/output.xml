@@ -1,45 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.1 (Python 3.11.0 on win32)" generated="20221124 18:44:35.546" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.1 (Python 3.11.0 on win32)" generated="20230215 19:19:59.297" rpa="false" schemaversion="3">
 <suite id="s1" name="Flipkart" source="C:\Robot\Flipkart">
 <suite id="s1-s1" name="Testcases" source="C:\Robot\Flipkart\Testcases">
-<suite id="s1-s1-s1" name="Search" source="C:\Robot\Flipkart\Testcases\Search.robot">
-<test id="s1-s1-s1-t1" name="Serching the product" line="15">
+<suite id="s1-s1-s1" name="Homepageactions" source="C:\Robot\Flipkart\Testcases\Homepageactions.robot">
+<test id="s1-s1-s1-t1" name="User must be able to click on the images after search" line="51">
 <kw name="Begin Web Test" library="Common" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>about:blank</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221124 18:44:36.002" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20221124 18:44:36.001" endtime="20221124 18:44:37.897"/>
+<msg timestamp="20230215 19:19:59.635" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20230215 19:19:59.635" endtime="20230215 19:20:01.706"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221124 18:44:37.897" endtime="20221124 18:44:38.023"/>
+<status status="PASS" starttime="20230215 19:20:01.706" endtime="20230215 19:20:01.827"/>
 </kw>
-<status status="PASS" starttime="20221124 18:44:36.000" endtime="20221124 18:44:38.023"/>
+<status status="PASS" starttime="20230215 19:19:59.634" endtime="20230215 19:20:01.827"/>
 </kw>
 <kw name="Open Application" library="HomepageDef">
 <kw name="Open the application" library="App">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${FlipkartURL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20221124 18:44:38.026" level="INFO">Opening url 'https://flipkart.com'</msg>
-<status status="PASS" starttime="20221124 18:44:38.025" endtime="20221124 18:45:13.720"/>
+<msg timestamp="20230215 19:20:01.830" level="INFO">Opening url 'https://flipkart.com'</msg>
+<status status="PASS" starttime="20230215 19:20:01.829" endtime="20230215 19:20:05.338"/>
 </kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>css=div&gt;div&gt;div&gt;button</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20221124 18:45:13.720" endtime="20221124 18:45:13.769"/>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230215 19:20:05.339" endtime="20230215 19:20:05.366"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230215 19:20:06.368" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230215 19:20:05.367" endtime="20230215 19:20:06.369"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>css=div&gt;div&gt;div&gt;button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221124 18:45:13.771" level="INFO">Clicking element 'css=div&gt;div&gt;div&gt;button'.</msg>
-<status status="PASS" starttime="20221124 18:45:13.770" endtime="20221124 18:45:13.878"/>
+<msg timestamp="20230215 19:20:06.372" level="INFO">Clicking element 'css=div&gt;div&gt;div&gt;button'.</msg>
+<status status="PASS" starttime="20230215 19:20:06.370" endtime="20230215 19:20:06.436"/>
 </kw>
-<status status="PASS" starttime="20221124 18:44:38.025" endtime="20221124 18:45:13.878"/>
+<status status="PASS" starttime="20230215 19:20:01.828" endtime="20230215 19:20:06.436"/>
 </kw>
-<status status="PASS" starttime="20221124 18:44:38.024" endtime="20221124 18:45:13.879"/>
+<status status="PASS" starttime="20230215 19:20:01.828" endtime="20230215 19:20:06.436"/>
 </kw>
 <kw name="Search the Product" library="HomepageDef">
 <kw name="Search For Product" library="Nav">
@@ -47,44 +53,411 @@
 <arg>css=form.header-form-search&gt;div&gt;div&gt;input</arg>
 <arg>${searchProduct}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221124 18:45:13.883" level="INFO">Typing text 'Apple Mobile' into text field 'css=form.header-form-search&gt;div&gt;div&gt;input'.</msg>
-<status status="PASS" starttime="20221124 18:45:13.882" endtime="20221124 18:45:14.066"/>
+<msg timestamp="20230215 19:20:06.439" level="INFO">Typing text 'TV' into text field 'css=form.header-form-search&gt;div&gt;div&gt;input'.</msg>
+<status status="PASS" starttime="20230215 19:20:06.438" endtime="20230215 19:20:06.544"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>css=form.header-form-search&gt;div&gt;button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221124 18:45:14.067" level="INFO">Clicking element 'css=form.header-form-search&gt;div&gt;button'.</msg>
-<status status="PASS" starttime="20221124 18:45:14.066" endtime="20221124 18:45:14.144"/>
+<msg timestamp="20230215 19:20:06.546" level="INFO">Clicking element 'css=form.header-form-search&gt;div&gt;button'.</msg>
+<status status="PASS" starttime="20230215 19:20:06.545" endtime="20230215 19:20:06.630"/>
 </kw>
-<status status="PASS" starttime="20221124 18:45:13.881" endtime="20221124 18:45:14.144"/>
+<status status="PASS" starttime="20230215 19:20:06.437" endtime="20230215 19:20:06.630"/>
 </kw>
-<status status="PASS" starttime="20221124 18:45:13.880" endtime="20221124 18:45:14.145"/>
+<status status="PASS" starttime="20230215 19:20:06.437" endtime="20230215 19:20:06.631"/>
 </kw>
 <kw name="Verify Search results" library="Resultpagedef">
 <kw name="verify search results displayed" library="resultpage">
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230215 19:20:11.633" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230215 19:20:06.632" endtime="20230215 19:20:11.634"/>
+</kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>results for "${searchProduct}"</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20221124 18:45:14.148" endtime="20221124 18:45:15.833"/>
+<status status="PASS" starttime="20230215 19:20:11.634" endtime="20230215 19:20:11.654"/>
 </kw>
-<status status="PASS" starttime="20221124 18:45:14.147" endtime="20221124 18:45:15.833"/>
+<status status="PASS" starttime="20230215 19:20:06.632" endtime="20230215 19:20:11.654"/>
 </kw>
-<status status="PASS" starttime="20221124 18:45:14.146" endtime="20221124 18:45:15.833"/>
+<status status="PASS" starttime="20230215 19:20:06.631" endtime="20230215 19:20:11.654"/>
+</kw>
+<kw name="Verify whether the image is being selected" library="HomepageDef">
+<kw name="Verify whether the image is being selected" library="App">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${First product}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230215 19:20:11.656" level="INFO">Clicking element 'xpath=//*[@id="container"]/div/div[3]/div/div[2]/div[2]'.</msg>
+<status status="PASS" starttime="20230215 19:20:11.656" endtime="20230215 19:20:11.743"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>locator=NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20230215 19:20:11.744" endtime="20230215 19:20:11.785"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@id="container"]/div/div[3]/div[1]/div[1]/div[1]/div/div[1]/div[2]/div[1]/div[2]/img</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230215 19:20:11.785" endtime="20230215 19:20:13.757"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//*[@id="container"]/div/div[3]/div[1]/div[1]/div[1]/div/div[1]/div[2]/div[1]/div[2]/img</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20230215 19:20:13.766" level="INFO">Current page contains element '//*[@id="container"]/div/div[3]/div[1]/div[1]/div[1]/div/div[1]/div[2]/div[1]/div[2]/img'.</msg>
+<status status="PASS" starttime="20230215 19:20:13.758" endtime="20230215 19:20:13.767"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230215 19:20:16.768" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230215 19:20:13.767" endtime="20230215 19:20:16.769"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>@{thumbnailImages}</var>
+<arg>//*[@id="container"]/div/div[3]/div[1]/div[1]/div[1]/div/div[1]/div[1]/div/div[1]/ul/li</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20230215 19:20:16.788" level="INFO">@{thumbnailImages} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="2dbd0c0e1e13eedb1aed8f3c07137a28", element="823ef736-5839-409f-81b1-bb751cc11bef")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement (ses...</msg>
+<status status="PASS" starttime="20230215 19:20:16.770" endtime="20230215 19:20:16.789"/>
+</kw>
+<for flavor="IN">
+<var>${thumbnail}</var>
+<value>@{thumbnailImages}</value>
+<iter>
+<var name="${thumbnail}">&lt;selenium.webdriver.remote.webelement.WebElement (session="2dbd0c0e1e13eedb1aed8f3c07137a28", element="823ef736-5839-409f-81b1-bb751cc11bef")&gt;</var>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${thumbnail}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230215 19:20:16.790" endtime="20230215 19:20:17.073"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${thumbnail}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230215 19:20:17.074" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="2dbd0c0e1e13eedb1aed8f3c07137a28", element="823ef736-5839-409f-81b1-bb751cc11bef")&gt;'.</msg>
+<status status="PASS" starttime="20230215 19:20:17.073" endtime="20230215 19:20:17.113"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230215 19:20:19.114" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230215 19:20:17.113" endtime="20230215 19:20:19.115"/>
+</kw>
+<status status="PASS" starttime="20230215 19:20:16.790" endtime="20230215 19:20:19.116"/>
+</iter>
+<iter>
+<var name="${thumbnail}">&lt;selenium.webdriver.remote.webelement.WebElement (session="2dbd0c0e1e13eedb1aed8f3c07137a28", element="4567c4c1-5b85-4b98-a57e-9032674a5d71")&gt;</var>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${thumbnail}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230215 19:20:19.117" endtime="20230215 19:20:19.390"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${thumbnail}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230215 19:20:19.391" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="2dbd0c0e1e13eedb1aed8f3c07137a28", element="4567c4c1-5b85-4b98-a57e-9032674a5d71")&gt;'.</msg>
+<status status="PASS" starttime="20230215 19:20:19.390" endtime="20230215 19:20:19.424"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230215 19:20:21.426" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230215 19:20:19.425" endtime="20230215 19:20:21.426"/>
+</kw>
+<status status="PASS" starttime="20230215 19:20:19.116" endtime="20230215 19:20:21.427"/>
+</iter>
+<iter>
+<var name="${thumbnail}">&lt;selenium.webdriver.remote.webelement.WebElement (session="2dbd0c0e1e13eedb1aed8f3c07137a28", element="8e909f62-fd71-41bb-a347-e54a28dff47f")&gt;</var>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${thumbnail}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230215 19:20:21.428" endtime="20230215 19:20:21.699"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${thumbnail}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230215 19:20:21.700" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="2dbd0c0e1e13eedb1aed8f3c07137a28", element="8e909f62-fd71-41bb-a347-e54a28dff47f")&gt;'.</msg>
+<status status="PASS" starttime="20230215 19:20:21.699" endtime="20230215 19:20:21.761"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230215 19:20:23.764" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230215 19:20:21.762" endtime="20230215 19:20:23.764"/>
+</kw>
+<status status="PASS" starttime="20230215 19:20:21.427" endtime="20230215 19:20:23.765"/>
+</iter>
+<iter>
+<var name="${thumbnail}">&lt;selenium.webdriver.remote.webelement.WebElement (session="2dbd0c0e1e13eedb1aed8f3c07137a28", element="8189d1ec-061c-44ee-b18b-1ca7125ec96b")&gt;</var>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${thumbnail}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230215 19:20:23.766" endtime="20230215 19:20:24.058"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${thumbnail}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230215 19:20:24.060" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="2dbd0c0e1e13eedb1aed8f3c07137a28", element="8189d1ec-061c-44ee-b18b-1ca7125ec96b")&gt;'.</msg>
+<status status="PASS" starttime="20230215 19:20:24.058" endtime="20230215 19:20:24.116"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230215 19:20:26.116" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230215 19:20:24.116" endtime="20230215 19:20:26.117"/>
+</kw>
+<status status="PASS" starttime="20230215 19:20:23.765" endtime="20230215 19:20:26.117"/>
+</iter>
+<iter>
+<var name="${thumbnail}">&lt;selenium.webdriver.remote.webelement.WebElement (session="2dbd0c0e1e13eedb1aed8f3c07137a28", element="5fe0a470-2866-447d-9c18-57c36e2a4234")&gt;</var>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${thumbnail}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230215 19:20:26.118" endtime="20230215 19:20:26.384"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${thumbnail}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230215 19:20:26.386" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="2dbd0c0e1e13eedb1aed8f3c07137a28", element="5fe0a470-2866-447d-9c18-57c36e2a4234")&gt;'.</msg>
+<status status="PASS" starttime="20230215 19:20:26.385" endtime="20230215 19:20:26.424"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230215 19:20:28.425" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230215 19:20:26.424" endtime="20230215 19:20:28.425"/>
+</kw>
+<status status="PASS" starttime="20230215 19:20:26.118" endtime="20230215 19:20:28.426"/>
+</iter>
+<iter>
+<var name="${thumbnail}">&lt;selenium.webdriver.remote.webelement.WebElement (session="2dbd0c0e1e13eedb1aed8f3c07137a28", element="936e15ab-4d30-4d61-803b-d6c1ca27d97b")&gt;</var>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${thumbnail}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230215 19:20:28.426" endtime="20230215 19:20:28.693"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${thumbnail}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230215 19:20:28.694" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="2dbd0c0e1e13eedb1aed8f3c07137a28", element="936e15ab-4d30-4d61-803b-d6c1ca27d97b")&gt;'.</msg>
+<status status="PASS" starttime="20230215 19:20:28.693" endtime="20230215 19:20:28.728"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230215 19:20:30.728" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230215 19:20:28.728" endtime="20230215 19:20:30.729"/>
+</kw>
+<status status="PASS" starttime="20230215 19:20:28.426" endtime="20230215 19:20:30.729"/>
+</iter>
+<iter>
+<var name="${thumbnail}">&lt;selenium.webdriver.remote.webelement.WebElement (session="2dbd0c0e1e13eedb1aed8f3c07137a28", element="8100ee5a-9fcd-48b0-997a-b3e11b6351e4")&gt;</var>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${thumbnail}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230215 19:20:30.730" endtime="20230215 19:20:31.001"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${thumbnail}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230215 19:20:31.002" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="2dbd0c0e1e13eedb1aed8f3c07137a28", element="8100ee5a-9fcd-48b0-997a-b3e11b6351e4")&gt;'.</msg>
+<status status="PASS" starttime="20230215 19:20:31.001" endtime="20230215 19:20:31.036"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230215 19:20:33.036" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230215 19:20:31.036" endtime="20230215 19:20:33.037"/>
+</kw>
+<status status="PASS" starttime="20230215 19:20:30.730" endtime="20230215 19:20:33.038"/>
+</iter>
+<iter>
+<var name="${thumbnail}">&lt;selenium.webdriver.remote.webelement.WebElement (session="2dbd0c0e1e13eedb1aed8f3c07137a28", element="2b342194-8303-4523-9afc-e27c8b666ce8")&gt;</var>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${thumbnail}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230215 19:20:33.038" endtime="20230215 19:20:33.316"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${thumbnail}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230215 19:20:33.317" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="2dbd0c0e1e13eedb1aed8f3c07137a28", element="2b342194-8303-4523-9afc-e27c8b666ce8")&gt;'.</msg>
+<status status="PASS" starttime="20230215 19:20:33.316" endtime="20230215 19:20:33.351"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230215 19:20:35.351" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230215 19:20:33.351" endtime="20230215 19:20:35.352"/>
+</kw>
+<status status="PASS" starttime="20230215 19:20:33.038" endtime="20230215 19:20:35.352"/>
+</iter>
+<iter>
+<var name="${thumbnail}">&lt;selenium.webdriver.remote.webelement.WebElement (session="2dbd0c0e1e13eedb1aed8f3c07137a28", element="f0e8af3f-8b95-4e87-b1fa-5f6450eb8a6a")&gt;</var>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${thumbnail}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230215 19:20:35.353" endtime="20230215 19:20:35.630"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${thumbnail}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230215 19:20:35.631" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="2dbd0c0e1e13eedb1aed8f3c07137a28", element="f0e8af3f-8b95-4e87-b1fa-5f6450eb8a6a")&gt;'.</msg>
+<status status="PASS" starttime="20230215 19:20:35.630" endtime="20230215 19:20:35.662"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230215 19:20:37.663" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230215 19:20:35.662" endtime="20230215 19:20:37.665"/>
+</kw>
+<status status="PASS" starttime="20230215 19:20:35.353" endtime="20230215 19:20:37.665"/>
+</iter>
+<iter>
+<var name="${thumbnail}">&lt;selenium.webdriver.remote.webelement.WebElement (session="2dbd0c0e1e13eedb1aed8f3c07137a28", element="13bdf2e2-67e0-4521-944c-ce6b25ddf923")&gt;</var>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${thumbnail}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230215 19:20:37.665" endtime="20230215 19:20:37.946"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${thumbnail}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230215 19:20:37.947" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="2dbd0c0e1e13eedb1aed8f3c07137a28", element="13bdf2e2-67e0-4521-944c-ce6b25ddf923")&gt;'.</msg>
+<status status="PASS" starttime="20230215 19:20:37.947" endtime="20230215 19:20:37.982"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230215 19:20:39.984" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230215 19:20:37.982" endtime="20230215 19:20:39.985"/>
+</kw>
+<status status="PASS" starttime="20230215 19:20:37.665" endtime="20230215 19:20:39.985"/>
+</iter>
+<iter>
+<var name="${thumbnail}">&lt;selenium.webdriver.remote.webelement.WebElement (session="2dbd0c0e1e13eedb1aed8f3c07137a28", element="489ad1b1-d5d4-4149-90a7-e7a37052e9fe")&gt;</var>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${thumbnail}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230215 19:20:39.986" endtime="20230215 19:20:40.264"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${thumbnail}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230215 19:20:40.265" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="2dbd0c0e1e13eedb1aed8f3c07137a28", element="489ad1b1-d5d4-4149-90a7-e7a37052e9fe")&gt;'.</msg>
+<status status="PASS" starttime="20230215 19:20:40.264" endtime="20230215 19:20:40.298"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230215 19:20:42.300" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230215 19:20:40.298" endtime="20230215 19:20:42.301"/>
+</kw>
+<status status="PASS" starttime="20230215 19:20:39.985" endtime="20230215 19:20:42.301"/>
+</iter>
+<iter>
+<var name="${thumbnail}">&lt;selenium.webdriver.remote.webelement.WebElement (session="2dbd0c0e1e13eedb1aed8f3c07137a28", element="cffe88b7-b9af-496c-b322-39da316b8cd8")&gt;</var>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${thumbnail}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230215 19:20:42.302" endtime="20230215 19:20:42.585"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${thumbnail}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230215 19:20:42.586" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="2dbd0c0e1e13eedb1aed8f3c07137a28", element="cffe88b7-b9af-496c-b322-39da316b8cd8")&gt;'.</msg>
+<status status="PASS" starttime="20230215 19:20:42.585" endtime="20230215 19:20:42.620"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230215 19:20:44.622" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230215 19:20:42.620" endtime="20230215 19:20:44.623"/>
+</kw>
+<status status="PASS" starttime="20230215 19:20:42.301" endtime="20230215 19:20:44.623"/>
+</iter>
+<iter>
+<var name="${thumbnail}">&lt;selenium.webdriver.remote.webelement.WebElement (session="2dbd0c0e1e13eedb1aed8f3c07137a28", element="f0db8e90-8cea-4bb0-8d41-a20eb42502d6")&gt;</var>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${thumbnail}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230215 19:20:44.624" endtime="20230215 19:20:44.902"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${thumbnail}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230215 19:20:44.903" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="2dbd0c0e1e13eedb1aed8f3c07137a28", element="f0db8e90-8cea-4bb0-8d41-a20eb42502d6")&gt;'.</msg>
+<status status="PASS" starttime="20230215 19:20:44.903" endtime="20230215 19:20:44.936"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230215 19:20:46.937" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230215 19:20:44.936" endtime="20230215 19:20:46.938"/>
+</kw>
+<status status="PASS" starttime="20230215 19:20:44.623" endtime="20230215 19:20:46.938"/>
+</iter>
+<iter>
+<var name="${thumbnail}">&lt;selenium.webdriver.remote.webelement.WebElement (session="2dbd0c0e1e13eedb1aed8f3c07137a28", element="9a985449-0f9e-47de-aed5-6d6ccd1b4985")&gt;</var>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${thumbnail}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230215 19:20:46.939" endtime="20230215 19:20:47.221"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${thumbnail}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230215 19:20:47.221" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="2dbd0c0e1e13eedb1aed8f3c07137a28", element="9a985449-0f9e-47de-aed5-6d6ccd1b4985")&gt;'.</msg>
+<status status="PASS" starttime="20230215 19:20:47.221" endtime="20230215 19:20:47.253"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230215 19:20:49.253" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230215 19:20:47.253" endtime="20230215 19:20:49.255"/>
+</kw>
+<status status="PASS" starttime="20230215 19:20:46.938" endtime="20230215 19:20:49.255"/>
+</iter>
+<iter>
+<var name="${thumbnail}">&lt;selenium.webdriver.remote.webelement.WebElement (session="2dbd0c0e1e13eedb1aed8f3c07137a28", element="a10caf18-ee88-4697-b9ab-adf668273eab")&gt;</var>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${thumbnail}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230215 19:20:49.256" endtime="20230215 19:20:49.531"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${thumbnail}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230215 19:20:49.531" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="2dbd0c0e1e13eedb1aed8f3c07137a28", element="a10caf18-ee88-4697-b9ab-adf668273eab")&gt;'.</msg>
+<status status="PASS" starttime="20230215 19:20:49.531" endtime="20230215 19:20:49.575"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230215 19:20:51.577" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230215 19:20:49.575" endtime="20230215 19:20:51.578"/>
+</kw>
+<status status="PASS" starttime="20230215 19:20:49.255" endtime="20230215 19:20:51.578"/>
+</iter>
+<status status="PASS" starttime="20230215 19:20:16.789" endtime="20230215 19:20:51.578"/>
+</for>
+<status status="PASS" starttime="20230215 19:20:11.655" endtime="20230215 19:20:51.579"/>
+</kw>
+<status status="PASS" starttime="20230215 19:20:11.655" endtime="20230215 19:20:51.579"/>
 </kw>
 <kw name="End Web Test" library="Common" type="TEARDOWN">
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20221124 18:45:15.835" endtime="20221124 18:45:22.322"/>
+<status status="PASS" starttime="20230215 19:20:51.580" endtime="20230215 19:20:53.855"/>
 </kw>
-<status status="PASS" starttime="20221124 18:45:15.834" endtime="20221124 18:45:22.323"/>
+<status status="PASS" starttime="20230215 19:20:51.580" endtime="20230215 19:20:53.856"/>
 </kw>
-<status status="PASS" starttime="20221124 18:44:35.997" endtime="20221124 18:45:22.324"/>
+<status status="PASS" starttime="20230215 19:19:59.633" endtime="20230215 19:20:53.857"/>
 </test>
-<status status="PASS" starttime="20221124 18:44:35.596" endtime="20221124 18:45:22.328"/>
+<status status="PASS" starttime="20230215 19:19:59.336" endtime="20230215 19:20:53.860"/>
 </suite>
-<status status="PASS" starttime="20221124 18:44:35.590" endtime="20221124 18:45:22.333"/>
+<status status="PASS" starttime="20230215 19:19:59.331" endtime="20230215 19:20:53.863"/>
 </suite>
-<status status="PASS" starttime="20221124 18:44:35.554" endtime="20221124 18:45:22.337"/>
+<status status="PASS" starttime="20230215 19:19:59.305" endtime="20230215 19:20:53.865"/>
 </suite>
 <statistics>
 <total>
@@ -95,7 +468,7 @@
 <suite>
 <stat pass="1" fail="0" skip="0" id="s1" name="Flipkart">Flipkart</stat>
 <stat pass="1" fail="0" skip="0" id="s1-s1" name="Testcases">Flipkart.Testcases</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Search">Flipkart.Testcases.Search</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Homepageactions">Flipkart.Testcases.Homepageactions</stat>
 </suite>
 </statistics>
 <errors>
