@@ -23,8 +23,8 @@ verify appliances page
 verify travel page
   Page Should Contain  Round Trip
 verify Top Offers page
-   #Page Should Contain  Deals of the Day
-   Page Should Contain  Something's not right!
+   Page Should Contain  Deals of the Day
+   #Page Should Contain  Something's not right!
 verify Beauty, Toys & More page
    Page Should Contain  Food Products
 verify Two Wheelers page

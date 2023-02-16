@@ -42,8 +42,8 @@ Open the travel page
 Open Top Offers page
     Click Link   Top Offers
     sleep  2s
-    Wait Until Page Contains  Something's not right!
-    #Wait Until Page Contains   Deals of the Day
+    #Wait Until Page Contains  Something's not right!
+    Wait Until Page Contains   Deals of the Day
 Open Beauty, Toys & More page
     Mouse Down On Link  Beauty, Toys & More
     sleep  2s
